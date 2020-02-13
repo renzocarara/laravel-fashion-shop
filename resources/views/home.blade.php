@@ -7,20 +7,32 @@
 
 <main>
 
-    <section class="">
+    <section class="container">
 
-        <h1>Catalogo prodotti</h1>
-        {{-- {{ dd($catalogo)}} --}}
+        <h2 class="text-center">Vetrina prodotti</h2>
 
-        @foreach ($catalogo as $key => $prodotto )
+        <div class="row text-center">
+            @foreach ($catalogo as $key => $prodotto )
 
-        <h3>Prodotto n. {{ $key + 1 }}</h3>
-        <p> nome: {{ $prodotto['name'] }} </p>
-        <p> categoria: {{ $prodotto['category'] }} </p>
-        <p> descrizione: {{ $prodotto['description'] }} </p>
-        <p> prezzo: {{ $prodotto['price'] }} €</p>
+            <div class="card col-lg-3 border-danger" style="width: 18rem;">
+                {{-- <img src="..." class="card-img-top" alt="..."> --}}
+                <div class="card-body text-info">
+                    <h5 class="card-title">{{ $prodotto['name'] }}</h5>
+                    <p class="card-text">{{ $prodotto['description'] }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">categoria: {{ $prodotto['category'] }}</li>
+                    {{-- <li class="list-group-item">disponibilità: </li> --}}
+                    <li class="list-group-item">prezzo: {{ $prodotto['price'] }} €</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Inserisci nel carrello</a>
+                    {{-- <a href="#" class="card-link">Ulteriori dettagli</a> --}}
+                </div>
+            </div>
 
-        @endforeach
+            @endforeach
+        </div>
 
     </section>
 
