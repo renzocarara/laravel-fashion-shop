@@ -10888,8 +10888,25 @@ section {
   padding-top: 80px;
 }
 
+section h1,
+section h4 {
+  padding-bottom: 50px;
+}
+
 section .card-container .card {
   margin: 20px;
   border: 1px solid blue;
+}
+
+section .menu {
+  width: 20%;
+}
+
+section .splash-screen {
+  width: 80%;
+}
+
+section .splash-screen img {
+  width: 100%;
 }
 

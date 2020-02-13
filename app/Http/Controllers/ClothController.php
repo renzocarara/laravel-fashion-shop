@@ -14,6 +14,14 @@ use  App\Cloth;
 
 class ClothController extends Controller
 {
+    // prezzo massimo per considerare un prodotto economico
+    public $max_price = 50;
+
+    public function home(){
+        // il controller ritorna semplicemente una view, senza parametri
+        return view('home');
+    }
+
     public function fullList(){
         // questa funzione accede al DB e tramite il metodo all()
         // ritorna tutti i record della tabella
@@ -26,6 +34,19 @@ class ClothController extends Controller
         $collection=Cloth::all();
         // il controller ritorna una view alla quale passa dei dati,
         // sono i dati letti dal DB (una 'collection')
-        return view('home',['catalogo' => $collection]);
+        return view('full_catalog',['full_list' => $collection]);
     }
+    public function cheapList(){
+
+        // prezzo massimo per considerare un prodotto economico
+        // $max_price = 50;
+
+        // interroga il DB per ottenere una lista di prodotti economici
+        // con prezzo minore o uguale ad un limite prefissato
+        $collection=Cloth::where('price', '<=', $this->max_price)->get();
+        // il controller ritorna una view alla quale passa dei dati,
+        // sono i dati letti dal DB (una 'collection')
+        return view('economici',['cheap_list' => $collection]);
+    }
+
 }

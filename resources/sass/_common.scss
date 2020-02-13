@@ -1,0 +1,27 @@
+section {
+    padding-top: 80px;
+
+    h1,
+    h4 {
+        padding-bottom: 50px;
+    }
+
+    .card-container {
+        .card {
+            margin: 20px;
+            border: 1px solid blue;
+        }
+    }
+
+    .menu {
+        width: 20%;
+    }
+
+    .splash-screen {
+        width: 80%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

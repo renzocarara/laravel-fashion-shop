@@ -1,7 +1,7 @@
 @extends('layouts.view_structure')
 
 {{-- imposto il titolo della pagina --}}
-@section('page-title', "Fashion Shop")
+@section('page-title', "Fashion Shop - Home")
 
 @section('content')
 
@@ -9,35 +9,15 @@
 
     <section class="container">
 
-        <h2 class="text-center">Vetrina prodotti</h2>
-
-        <div class="card-container d-flex justify-content-center flex-wrap">
-            @foreach ($catalogo as $key => $prodotto )
-
-            <div class="card col-lg-3 border-danger" style="width: 18rem;">
-                {{-- <img src="..." class="card-img-top" alt="..."> --}}
-                <div class="card-body text-info">
-                    <h5 class="card-title">{{ $prodotto['name'] }}</h5>
-                    <p class="card-text">{{ $prodotto['description'] }}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">categoria: {{ $prodotto['category'] }}</li>
-                    {{-- <li class="list-group-item">disponibilità: </li> --}}
-                    <li class="list-group-item">prezzo: {{ $prodotto['price'] }} €</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Inserisci nel carrello</a>
-                    {{-- <a href="#" class="card-link">Ulteriori dettagli</a> --}}
-                </div>
+        <h1 class="text-center"><strong>Prodotti online per tutte le tasche</strong></h1>
+        <div class="d-flex">
+            @include ('layouts.menu')
+            <div class="splash-screen">
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fretailblog.jll.com%2Fwp-content%2Fuploads%2F2018%2F02%2FBrand.jpg&f=1&nofb=1" alt="splash screen shopping">
             </div>
-
-            @endforeach
         </div>
 
     </section>
-
-
-
 
 </main>
 
