@@ -1,8 +1,10 @@
 section {
     padding-top: 80px;
 
-    .row .card {
-        margin: 20px;
-        border: 1px solid blue;
+    .card-container {
+        .card {
+            margin: 20px;
+            border: 1px solid blue;
+        }
     }
 }

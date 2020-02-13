@@ -10888,7 +10888,7 @@ section {
   padding-top: 80px;
 }
 
-section .row .card {
+section .card-container .card {
   margin: 20px;
   border: 1px solid blue;
 }

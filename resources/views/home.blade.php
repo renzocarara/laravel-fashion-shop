@@ -11,7 +11,7 @@
 
         <h2 class="text-center">Vetrina prodotti</h2>
 
-        <div class="row text-center">
+        <div class="card-container d-flex justify-content-center flex-wrap">
             @foreach ($catalogo as $key => $prodotto )
 
             <div class="card col-lg-3 border-danger" style="width: 18rem;">
