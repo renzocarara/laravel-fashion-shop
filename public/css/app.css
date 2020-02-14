@@ -10898,15 +10898,15 @@ section .card-container .card {
   border: 1px solid blue;
 }
 
-section .menu {
+section .left-side-menu {
   width: 20%;
 }
 
-section .splash-screen {
+section .right-panel {
   width: 80%;
 }
 
-section .splash-screen img {
+section .right-panel img {
   width: 100%;
 }
 

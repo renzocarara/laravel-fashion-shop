@@ -9,11 +9,11 @@
 
     <section class="container">
 
-        <h1 class="text-center"><strong>Prodotti online per tutte le tasche</strong></h1>
+        <h1 class="text-center"><strong>Gestione catalogo prodotti</strong></h1>
         <div class="d-flex">
-            @include ('layouts.menu')
-            <div class="splash-screen">
-                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fretailblog.jll.com%2Fwp-content%2Fuploads%2F2018%2F02%2FBrand.jpg&f=1&nofb=1" alt="splash screen shopping">
+            @include ('layouts.left-side-menu')
+            <div class="right-panel">
+                <img src="https://velvetmag.it/wp-content/uploads/2017/05/copertina.jpeg" alt="splash screen shopping">
             </div>
         </div>
 
