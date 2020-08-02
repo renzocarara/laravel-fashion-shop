@@ -22,6 +22,7 @@
     "dependencies": {
         "bootstrap": "^4.4.1",
         "dot-prop": "^5.2.0",
+        "elliptic": "^6.5.3",
         "jquery": "^3.5.0"
     }
 }
